@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #210d96;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #130000;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-container p {
+            margin-top: 15px;
+            color: #850c0c;
+        }
+
+        .login-container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+        .remember-me {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Logo -->
+        <img src="https://wepik.com/api/vector/02016782-d261-4418-9c86-f1375b394951/preview" alt="Aadhya Properties Logo">
+        
+        <!-- Login Form -->
+        <h2>Login</h2>
+        <form id="loginForm">
+            <!-- Email -->
+            <input type="email" id="email" placeholder="Email" required>
+            
+            <!-- Password -->
+            <input type="password" id="password" placeholder="Password" required>
+            
+            <!-- Remember Me -->
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Login</button>
+        </form>
+        
+        <!-- Forgot Password and Register Links -->
+        <p><a href="#">Forgot password?</a> | <a href="register.html">Register</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            alert(`Logging in with: ${email}`);
+            // You can send data to the backend here (e.g., using fetch or axios)
+        });
+    </script>
+
+</body>
+</html>

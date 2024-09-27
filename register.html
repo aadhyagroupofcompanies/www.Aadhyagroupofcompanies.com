@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .register-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-container button:hover {
+            background-color: #218838;
+        }
+
+        .register-container p {
+            margin-top: 15px;
+            color: #666;
+        }
+
+        .register-container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <!-- Logo -->
+        <img src="https://wepik.com/api/vector/02016782-d261-4418-9c86-f1375b394951/preview" alt="Aadhya Properties Logo">
+        
+        <!-- Registration Form -->
+        <h2>Register</h2>
+        <form id="registerForm">
+            <!-- Full Name -->
+            <input type="text" id="name" placeholder="Full Name" required>
+            
+            <!-- Email -->
+            <input type="email" id="email" placeholder="Email" required>
+            
+            <!-- Password -->
+            <input type="password" id="password" placeholder="Password" required>
+            
+            <!-- Confirm Password -->
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+        
+        <!-- Already have an account? -->
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            alert(`Registration successful for: ${name} (${email})`);
+            // You can send data to the backend here
+        });
+    </script>
+
+</body>
+</html>
